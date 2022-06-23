@@ -1,6 +1,7 @@
 import 'twin.macro'
 import GlobalStyle from '@/GlobalStyle'
 
+import AnimateCounter from '@components/Counter'
 import fadeIn from '@animations/fadeIn'
 import TripleImage from '@images/triple2x.png'
 import PlayStoreImage from '@images/play-store2x.png'
@@ -25,16 +26,25 @@ const App = () => {
           <div tw="w-417">
             <div
               tw="text-36 tracking-[-1px] mb-40 text-black-100"
-              css={fadeIn()}
+              css={fadeIn({ delay: '100ms' })}
             >
               <div tw="mb-20">
-                <strong>700만 명</strong>의 여행자
+                <strong>
+                  <AnimateCounter end={700} />만 명
+                </strong>
+                의 여행자
               </div>
               <div tw="mb-20">
-                <strong>100만 개</strong>의 여행리뷰
+                <strong>
+                  <AnimateCounter end={100} />만 개
+                </strong>
+                의 여행리뷰
               </div>
               <div tw="mb-20">
-                <strong>470만 개</strong>의 여행일정
+                <strong>
+                  <AnimateCounter end={470} />만 개
+                </strong>
+                의 여행일정
               </div>
             </div>
             <div tw="flex" css={fadeIn({ delay: '200ms' })}>
