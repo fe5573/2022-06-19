@@ -1,7 +1,7 @@
 import 'twin.macro'
 import GlobalStyle from '@/GlobalStyle'
-import fadeIn from '@/animations/fadeIn'
 
+import fadeIn from '@animations/fadeIn'
 import TripleImage from '@images/triple2x.png'
 import PlayStoreImage from '@images/play-store2x.png'
 import AppleImage from '@images/badge-apple4x.png'
