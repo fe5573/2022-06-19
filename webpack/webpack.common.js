@@ -37,7 +37,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: join(__dirname, '../public/index.html'),
-      favicon: join(__dirname, '../public/favicon.ico'),
+      favicon: join(__dirname, '../public/favicon.png'),
     }),
     new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin(),
