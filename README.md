@@ -95,8 +95,9 @@ Angular, React, Vue, Svelt 보통 이렇게 많이 쓰는것 같습니다.
 
 ## 스타일링
 어떤 툴로 스타일링을 할것인가 [고민](https://develoger.kr/frontend/a-study-on-the-css-writing/)을 많이 했습니다.  
-처음에는 CSS만 쓰다가 너무 힘들어서 -> Bootstrap같은 툴킷을 사용했고 -> 한걸음 나아가 Bootstrap + SCSS를 쓰다가 이후에는 -> Emotion을 살짝 써보고 최근에는 -> [CSS-Module + Tailwind](https://github.com/airman5573/react-shopping-cart-prod/tree/airman5573/src/pages/cart/components/cart-form)를 사용했습니다.  
-CSS-Module + Tailwind가 만족도가 높아서 이번 과제에도 적용을 하려 했습니다. 그런데 생각보다 네이밍이 어려웠습니다. 기껏 생각해 낸것은  
+지금까지 CSS -> Bootstrap -> Bootstrap + SCSS -> BEM -> Emotion -> [CSS-Module + Tailwind](https://github.com/airman5573/react-shopping-cart-prod/tree/airman5573/src/pages/cart/components/cart-form) 이런 과정을 거쳤습니다.  
+CSS-Module + Tailwind가 만족도가 높아서 이번 과제에도 적용을 하려 했습니다만, 생각보다 네이밍이 어려웠습니다.  
+기껏 생각해 낸것은  
 ```
 .top {
   .left {}
@@ -108,7 +109,8 @@ CSS-Module + Tailwind가 만족도가 높아서 이번 과제에도 적용을 �
 ```
 이정도였습니다. 그래서 Tailwind만 써보기로 했습니다. 네이밍 걱정을 안해도 되기 때문입니다.  
 하지만 Tailwind만으로는 다이나믹한 CSS를 깔끔하게 표현하기가 어렵다고 생각했습니다.  
-그래서 저는 Tailwind의 이점과 CSS-in-JS의 이점을 다 누리고 싶어서 [twin.macro](https://github.com/ben-rogerson/twin.macro)와 [emotion](https://emotion.sh/docs/introduction)을 같이 사용했습니다. 둘을 같이 썼을때의 이점은 다음과 같습니다.  
+그래서 저는 인터넷을 뒤적이다가 [twin.macro](https://github.com/ben-rogerson/twin.macro)와 [emotion](https://emotion.sh/docs/introduction)의 [조합](https://mxstbr.com/thoughts/tailwind/)을 발견했습니다.  
+둘을 같이 썼을때의 이점은 다음과 같습니다.  
 ### twin.macro(Tailwind)
 - 네이밍 걱정을 안해도 됩니다. 비지니스 로직과 CSS에 집중할 수 있습니다
 - 간결하게 CSS를 표현할 수 있습니다
@@ -122,7 +124,7 @@ CSS-Module + Tailwind가 만족도가 높아서 이번 과제에도 적용을 �
 - autoprefixer가 자동으로 적용됩니다
 - SSR와 잘 어울립니다
 
-요약하자면 twin.macro + emotion의 조합으로 atomic css를 작성할 수 있으며 동시에 dynamic한 값들도 대응이 가능해집니다.  
+요약하자면 **twin.macro + emotion의 조합으로 atomic css를 작성할 수 있으며 동시에 dynamic한 값들도 대응이 가능**해집니다.  
 
 하지만 분명히 단점도 존재합니다.
 ### 단점
@@ -141,10 +143,12 @@ JS대신 TS를 사용했습니다. 가능하면 TS로 많이 짜려고 노력중
 
 ### Wepback설정
 CRA를 사용하지 않고 Webpack, Babel, TS, Emotion 설정을 직접 했습니다.  
-가능하면 직접 설정하는것이 더 안전하다는 입장입니다. 물론 Optimization부터 테스트 환경 구성까지 일일이 하려면 시간이 적잖게 들겠지만  
+가능하면 직접 설정하는것이 더 안전하다는 입장입니다.  
+물론 Optimization부터 테스트 환경 구성까지 일일이 하려면 시간이 적잖게 들겠지만  
 유의미한 작업이라고 생각합니다. 문제가 생겼을때 잘 대처할 수 있고, 세세한 커스터마이징을 할 수 있기 때문입니다.
 
 # 느낀점
 사실 과제를 처음 봤을때 쉽다고 생각했는데, 예상보다 어려웠습니다.  
 네이밍이 어려워서 시작된 고민이 꽤나 깊어졌고, 좋은 CSS 테크닉을 찾는데 시간이 적잖게 걸렸습니다.  
-개발 환경을 설정하는 것도 꽤나 오래걸렸습니다. 점점 속도가 느려지는 카운터는 인터넷에 좋은 자료가 있어서 간신히 구현했습니다. 
+개발 환경을 설정하는 것도 꽤나 오래걸렸습니다.  
+점점 속도가 느려지는 카운터는 인터넷에 좋은 자료가 있어서 간신히 구현했습니다. 
