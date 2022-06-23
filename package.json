@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --progress --config ./webpack/webpack.prod.js",
     "clean": "npm cache clean --force && rm -rf node_modules && rm package-lock.json",
-    "start": "webpack serve --open --progress --port 9000 --config ./webpack/webpack.dev.js",
+    "start": "webpack serve --open --progress --config ./webpack/webpack.dev.js",
     "lint:es": "eslint '**/*.{js,ts,tsx}'",
     "lint:es:fix": "npm run lint:es -- --fix",
     "lint:etc": "prettier '**/*.{json,yaml,md}' --check",
