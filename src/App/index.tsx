@@ -1,7 +1,13 @@
+import GlobalStyle from '@/GlobalStyle'
 import 'twin.macro'
 
 const App = () => {
-  return <div tw="w-100 h-100 bg-black-100" />
+  return (
+    <>
+      <GlobalStyle />
+      <div />
+    </>
+  )
 }
 
 export default App
