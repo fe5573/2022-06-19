@@ -47,6 +47,8 @@ module.exports = {
       '@': resolve(__dirname, '../src'),
       '@components': resolve(__dirname, '../src/components'),
       '@images': resolve(__dirname, '../src/assets/images'),
+      '@animations': resolve(__dirname, '../src/animations'),
+      '@utils': resolve(__dirname, '../src/utils'),
     },
   },
 }

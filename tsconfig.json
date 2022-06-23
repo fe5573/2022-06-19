@@ -19,6 +19,8 @@
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@images/*": ["src/assets/images/*"],
+      "@animations/*": ["src/animations/*"],
+      "@utils/*": ["src/utils/*"],
     },
   },
   "include": ["src", "src/types/*"]

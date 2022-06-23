@@ -1,5 +1,6 @@
 import 'twin.macro'
 import GlobalStyle from '@/GlobalStyle'
+import fadeIn from '@/animations/fadeIn'
 
 import TripleImage from '@images/triple2x.png'
 import PlayStoreImage from '@images/play-store2x.png'
@@ -11,7 +12,7 @@ const App = () => {
       <GlobalStyle />
       <div tw="flex justify-center items-center h-full">
         <div tw="min-w-1040 ml-auto mr-auto flex justify-between">
-          <div tw="w-400 h-338">
+          <div tw="w-400 h-338" css={fadeIn()}>
             <img
               tw="w-full"
               src={TripleImage}
@@ -22,7 +23,10 @@ const App = () => {
             </div>
           </div>
           <div tw="w-417">
-            <div tw="text-36 tracking-[-1px] mb-40 text-black-100">
+            <div
+              tw="text-36 tracking-[-1px] mb-40 text-black-100"
+              css={fadeIn()}
+            >
               <div tw="mb-20">
                 <strong>700만 명</strong>의 여행자
               </div>
@@ -33,7 +37,7 @@ const App = () => {
                 <strong>470만 개</strong>의 여행일정
               </div>
             </div>
-            <div tw="flex">
+            <div tw="flex" css={fadeIn({ delay: '200ms' })}>
               <div tw="flex items-center text-14 leading-22 mr-39 text-gray-200">
                 <div tw="w-54 h-54 mr-8">
                   <img
