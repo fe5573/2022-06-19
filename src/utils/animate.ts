@@ -7,7 +7,7 @@ interface Args {
 const animate = ({ timing, draw, duration }: Args) => {
   const start = performance.now()
 
-  requestAnimationFrame(function animate(time) {
+  let raqId = requestAnimationFrame(function animate(time) {
     // timeFraction은 0에서 1사이의 값이 됩니다
     let timeFraction = (time - start) / duration
     if (timeFraction >= 1) {
@@ -19,9 +19,10 @@ const animate = ({ timing, draw, duration }: Args) => {
     draw(progress)
 
     if (timeFraction < 1) {
-      requestAnimationFrame(animate)
+      raqId = requestAnimationFrame(animate)
     }
   })
+  return () => cancelAnimationFrame(raqId)
 }
 
 export default animate

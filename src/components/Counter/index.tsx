@@ -22,7 +22,7 @@ const AnimateCounter = ({
   const counterRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    animate({
+    return animate({
       timing: (timeFraction) => {
         return timeFraction >= 1 ? 1 : 1 - 2 ** (-10 * timeFraction)
       },
