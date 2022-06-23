@@ -1,0 +1,24 @@
+{
+  "name": "mission",
+  "version": "1.0.0",
+  "description": "미션입니다",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "fe5573",
+  "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "commitizen": "^4.2.4",
+    "cz-customizable": "^6.3.0",
+    "husky": "^7.0.0"
+  }
+}
