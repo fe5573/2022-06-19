@@ -4,7 +4,13 @@
   "description": "미션입니다",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --config ./webpack/webpack.prod.js",
+    "clean": "npm cache clean --force && rm -rf node_modules && rm package-lock.json",
+    "start": "webpack serve --open --progress --port 9000 --config ./webpack/webpack.dev.js",
+    "lint:es": "eslint '**/*.{js,ts,tsx}'",
+    "lint:es:fix": "npm run lint:es -- --fix",
+    "lint:etc": "prettier '**/*.{json,yaml,md}' --check",
+    "lint:etc:fix": "prettier '**/*.{json,yaml,md}' --write",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -16,9 +22,47 @@
     }
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
     "@commitlint/cli": "^17.0.2",
+    "@emotion/babel-plugin": "^11.9.2",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@titicaca/eslint-config-triple": "^3.1.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-twin": "^1.0.2",
+    "clean-webpack-plugin": "^4.0.0",
     "commitizen": "^4.2.4",
     "cz-customizable": "^6.3.0",
-    "husky": "^7.0.0"
+    "eslint": "^8.18.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-jsx": "^11.0.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.11",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.3",
+    "ts-loader": "^9.3.0",
+    "twin.macro": "^3.0.0-rc.3",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "emotion-reset": "^3.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
