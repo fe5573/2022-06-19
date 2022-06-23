@@ -14,6 +14,10 @@ module.exports = {
       black: {
         100: 'rgb(58, 58, 58)',
       },
+      white: {
+        100: '#cccccc',
+        900: 'white',
+      },
     },
     extend: {
       width: px0To2000,

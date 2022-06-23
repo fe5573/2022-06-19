@@ -25,6 +25,15 @@ const GlobalStyle = () => {
         strong {
           font-weight: bold;
         }
+
+        body {
+          background-color: white;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: black;
+          }
+        }
       `}
     />
   )

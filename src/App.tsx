@@ -19,13 +19,13 @@ const App = () => {
               src={TripleImage}
               alt="트리플 아이콘과 구글 플레이스토어 수상 트로피 이미지"
             />
-            <div tw="text-center relative top-[-60px] text-gray-100">
+            <div tw="text-center relative top-[-60px] text-gray-100 dark:text-white-100">
               2021년 12월 기준
             </div>
           </div>
           <div tw="w-417">
             <div
-              tw="text-36 tracking-[-1px] mb-40 text-black-100"
+              tw="text-36 tracking-[-1px] mb-40 text-black-100 dark:text-white-900"
               css={fadeIn({ delay: '100ms' })}
             >
               <div tw="mb-20">
@@ -48,7 +48,7 @@ const App = () => {
               </div>
             </div>
             <div tw="flex" css={fadeIn({ delay: '200ms' })}>
-              <div tw="flex items-center text-14 leading-22 mr-39 text-gray-200">
+              <div tw="flex items-center text-14 leading-22 mr-39 text-gray-200 dark:text-white-100">
                 <div tw="w-54 h-54 mr-8">
                   <img
                     tw="w-full"
@@ -62,7 +62,7 @@ const App = () => {
                   올해의 앱 최우수상 수상
                 </strong>
               </div>
-              <div tw="flex items-center text-14 leading-22 text-gray-200">
+              <div tw="flex items-center text-14 leading-22 text-gray-200 dark:text-white-100">
                 <div tw="w-54 h-54 mr-8">
                   <img
                     tw="w-full"
