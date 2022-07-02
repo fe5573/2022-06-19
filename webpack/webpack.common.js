@@ -8,7 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   mode: 'development',
   entry: join(__dirname, '../src/index.tsx'),
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   output: {
     filename: 'main.js',
     path: join(__dirname, '../dist'),
@@ -18,15 +18,7 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
-            },
-          },
-          'babel-loader',
-        ],
+        use: ['babel-loader'],
       },
       {
         test: /\.(png|jpg|jpeg)$/i,
