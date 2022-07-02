@@ -1,4 +1,5 @@
 import 'twin.macro'
+
 import GlobalStyle from '@/GlobalStyle'
 
 import AnimateCounter from '@components/Counter'
