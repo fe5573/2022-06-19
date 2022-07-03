@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { join, resolve } = require('path')
 
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
@@ -32,7 +31,6 @@ module.exports = {
       favicon: join(__dirname, '../public/favicon.png'),
     }),
     new CleanWebpackPlugin(),
-    new ForkTsCheckerWebpackPlugin(),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
