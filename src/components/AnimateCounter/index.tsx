@@ -2,23 +2,18 @@ import { useEffect, useRef } from 'react'
 
 import animate from '@/utils/animate'
 
-import { AtLeast } from '../../types'
+import { MakeOptional } from '../../types'
 
-type Props = AtLeast<
+type Props = MakeOptional<
   {
     start: number
     end: number
     duration: number
-    timingFunction: 'linear' | 'ease-in' | 'ease-out'
   },
   'end'
 >
 
-const AnimateCounter = ({
-  start = 0,
-  end,
-  duration = 2000,
-}: AtLeast<Props, 'end'>) => {
+const AnimateCounter = ({ start = 0, end, duration = 2000 }: Props) => {
   const counterRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
