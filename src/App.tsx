@@ -2,7 +2,7 @@ import 'twin.macro'
 
 import GlobalStyle from '@/GlobalStyle'
 
-import AnimateCounter from '@components/Counter'
+import AnimateCounter from '@components/AnimateCounter'
 import fadeIn from '@animations/fadeIn'
 import TripleImage from '@images/triple2x.png'
 import PlayStoreImage from '@images/play-store2x.png'
